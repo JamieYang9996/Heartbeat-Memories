@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-HBM 系统初始化脚本
-一键初始化 Humanized Brain Memory 系统
+Heartbeat-Memories 系统初始化脚本
+一键初始化 Heartbeat-Memories 系统
 """
 
 import os
@@ -30,7 +30,7 @@ class HBMInstaller:
         self.hbm_root = self.detect_hbm_root(hbm_root)
         self.config = {}
         
-        print(f"🚀 HBM 初始化开始")
+        print(f"🚀 Heartbeat-Memories 初始化开始")
         print(f"📁 系统类型: {self.system}")
         print(f"📁 HBM 根目录: {self.hbm_root}")
     
@@ -243,7 +243,7 @@ echo   python %HBM_ROOT%\\scripts\\local_memory_system_v2.py --help
         
         readme_path = self.hbm_root / "README.md"
         
-        readme_content = f"""# HBM (Humanized Brain Memory)
+        readme_content = f"""# Heartbeat-Memories (HBM)
 
 **完全本地化的长期记忆系统**，让 OpenClaw 记住一切重要对话、目标、经验和情感。
 
@@ -383,7 +383,7 @@ MIT License - 详见 LICENSE 文件
     def install(self, skip_deps=False, skip_model=False):
         """执行完整安装流程"""
         print(f"=" * 60)
-        print(f"🤖 HBM (Humanized Brain Memory) 安装向导")
+        print(f"🤖 Heartbeat-Memories (HBM) 安装向导")
         print(f"=" * 60)
         
         try:

@@ -1,6 +1,6 @@
-# 帮我安装 HBM
+# 帮我安装 Heartbeat-Memories
 
-请帮我安装 HBM (Humanized Brain Memory) 记忆系统：
+请帮我安装 Heartbeat-Memories (HBM) 记忆系统：
 
 ```bash
 # 一行命令自动安装
@@ -49,7 +49,7 @@ python3 install_hbm.py
 - **网络问题**：国内用户可使用镜像源
 - **依赖问题**：手动安装 `pip install chromadb sentence-transformers faiss-cpu`
 
-## 更新 HBM
+## 更新 Heartbeat-Memories
 
 已经安装过了？更新命令：
 

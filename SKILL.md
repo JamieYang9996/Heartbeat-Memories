@@ -1,7 +1,7 @@
 ---
 name: hbm
 description: >
-  Humanized Brain Memory - 完全本地化的长期记忆系统，五大记忆库 + 语义搜索 + 情感交互
+  Heartbeat-Memories (HBM) - 完全本地化的长期记忆系统，五大记忆库 + 语义搜索 + 情感交互
   适用于：需要长期记忆对话、追踪目标、记录经验的OpenClaw用户
   特点：零API Key、零Token消耗、跨平台支持、完全离线运行
 triggers:
@@ -12,7 +12,7 @@ triggers:
   - "check goals"、"how did we solve this"
 ---
 
-# HBM (Humanized Brain Memory) - 使用指南
+# Heartbeat-Memories (HBM) - OpenClaw Skill
 
 **完全本地化的AI长期记忆系统**，让你的OpenClaw记住一切重要对话、目标、经验和情感。
 
@@ -24,7 +24,7 @@ triggers:
 ### 方案A：复制给AI自动安装（推荐）
 ```bash
 # 复制这句话给你的AI助手（OpenClaw/Claude Code等）：
-帮我安装 HBM：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py
+帮我安装 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py
 
 # AI会自动执行安装，你只需确认权限即可
 ```
@@ -62,7 +62,7 @@ openclaw skill install hbm
 
 ```bash
 # 复制给AI自动更新：
-帮我更新 HBM：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py
+帮我更新 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py
 
 # 或手动更新：
 curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py | python3
@@ -75,7 +75,7 @@ curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/upd
 cd ~/.openclaw/skills/hbm && python3 scripts/hbm_doctor.py
 
 # 或直接复制给AI：
-帮我检查 HBM：运行 hbm_doctor.py
+帮我检查 Heartbeat-Memories：运行 hbm_doctor.py
 ```
 
 ## 📁 系统架构
@@ -126,7 +126,7 @@ hbm/
 ## 🔧 使用方法
 
 ### 基础使用（开箱即用）
-安装后无需额外配置，HBM会自动：
+安装后无需额外配置，Heartbeat-Memories 会自动：
 1. 记录重要对话到记忆库
 2. 响应触发词进行检索
 3. 维护记忆库完整性
@@ -187,7 +187,7 @@ A：已适配Windows(WSL/Git Bash)、Linux、macOS，自动检测系统。
 
 ### 诊断命令
 ```bash
-# 检查HBM状态
+# 检查 Heartbeat-Memories 状态
 cd ~/.openclaw/skills/hbm && python3 scripts/hbm_init.py --check
 
 # 查看记忆库
@@ -238,6 +238,6 @@ MIT License - 详见 LICENSE 文件
 
 ---
 
-**HBM让你的OpenClaw真正拥有长期记忆，成为更懂你的智能助手！**
+**Heartbeat-Memories 让你的 OpenClaw 真正拥有长期记忆，成为更懂你的智能助手！**
 
 *最后更新：2026年3月25日*

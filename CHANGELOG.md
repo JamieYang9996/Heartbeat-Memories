@@ -1,4 +1,4 @@
-# HBM Skill 版本更新日志
+# Heartbeat-Memories Skill 版本更新日志
 
 ## v1.0.0 (2026-03-25)
 
@@ -74,7 +74,7 @@ hbm-skill/
 ### 🚀 安装命令示例
 ```bash
 # 一句话安装（复制给 AI）
-帮我安装 HBM：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py
+帮我安装 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py
 
 # 手动安装
 curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py | python3
@@ -83,7 +83,7 @@ curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/ins
 ### 🔄 更新命令
 ```bash
 # 一句话更新
-帮我更新 HBM：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py
+帮我更新 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py
 
 # 手动更新
 curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py | python3

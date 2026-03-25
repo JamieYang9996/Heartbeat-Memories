@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-HBM 系统诊断工具
+Heartbeat-Memories 系统诊断工具
 运行：python3 scripts/hbm_doctor.py
 或：cd ~/.openclaw/skills/hbm && python3 scripts/hbm_doctor.py
 """
@@ -19,7 +19,7 @@ import shutil
 # ==================== 配置 ====================
 
 def get_hbm_root():
-    """获取HBM根目录"""
+    """获取 Heartbeat-Memories 根目录"""
     # 检查环境变量
     hbm_root = os.getenv("HBM_ROOT")
     if hbm_root:
@@ -64,15 +64,15 @@ class DiagnosticResult:
         return f"{icon} [{self.category}] {self.test_name}: {self.message}"
 
 class HBMDiagnostic:
-    """HBM系统诊断"""
+    """Heartbeat-Memories 系统诊断"""
     
     def __init__(self):
         self.results = []
         self.system = platform.system()
         self.python_version = sys.version
         
-        print(f"\n🔍 HBM 系统诊断报告")
-        print(f"📁 HBM根目录: {HBM_ROOT}")
+        print(f"\n🔍 Heartbeat-Memories 系统诊断报告")
+        print(f"📁 Heartbeat-Memories 根目录: {HBM_ROOT}")
         print(f"💻 系统: {self.system} {platform.release()}")
         print(f"🐍 Python: {self.python_version}")
         print("-" * 60)
@@ -91,7 +91,7 @@ class HBMDiagnostic:
         # 1. 系统基础检查
         self.test_system_basics()
         
-        # 2. HBM安装检查
+        # 2. Heartbeat-Memories 安装检查
         self.test_hbm_installation()
         
         # 3. Python依赖检查

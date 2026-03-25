@@ -1,6 +1,6 @@
-# 帮我更新 HBM
+# 帮我更新 Heartbeat-Memories
 
-HBM 已安装，请帮我更新到最新版本：
+Heartbeat-Memories 已安装，请帮我更新到最新版本：
 
 ```bash
 # 一行命令自动更新
@@ -19,7 +19,7 @@ python3 update_hbm.py
 
 ## 更新过程包括：
 
-1. **检查当前安装**：确认 HBM 已安装且为 git 仓库
+1. **检查当前安装**：确认 Heartbeat-Memories 已安装且为 git 仓库
 2. **拉取最新代码**：从 GitHub 获取最新版本
 3. **更新依赖**：如有新依赖会提示安装
 4. **运行配置更新**：应用最新的配置变更

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-HBM Skill 更新脚本
+Heartbeat-Memories Skill 更新脚本
 运行：curl -s https://raw.githubusercontent.com/[用户名]/hbm-skill/main/scripts/update_hbm.py | python3
 """
 
@@ -53,10 +53,10 @@ def run_command(cmd, cwd=None):
 # ==================== 更新函数 ====================
 
 def check_installation():
-    """检查HBM是否已安装"""
+    """检查 Heartbeat-Memories 是否已安装"""
     if not INSTALL_PATH.exists():
-        print_error(f"HBM 未安装: {INSTALL_PATH}")
-        print("💡 请先安装HBM:")
+        print_error(f"Heartbeat-Memories 未安装: {INSTALL_PATH}")
+        print("💡 请先安装 Heartbeat-Memories:")
         print("   curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py | python3")
         return False
     
@@ -194,7 +194,7 @@ def show_update_summary():
     """显示更新摘要"""
     print_header("更新完成！")
     
-    print("\n🎉 HBM Skill 已更新到最新版本")
+    print("\n🎉 Heartbeat-Memories Skill 已更新到最新版本")
     print(f"📁 安装位置: {INSTALL_PATH}")
     
     print("\n📌 下一步:")
@@ -216,8 +216,8 @@ def show_update_summary():
 # ==================== 主函数 ====================
 
 def main():
-    parser = argparse.ArgumentParser(description="HBM Skill 更新工具")
-    parser.add_argument("--root", help="指定HBM安装目录（默认：~/.openclaw/skills/hbm）")
+    parser = argparse.ArgumentParser(description="Heartbeat-Memories Skill 更新工具")
+    parser.add_argument("--root", help="指定 Heartbeat-Memories 安装目录（默认：~/.openclaw/skills/hbm）")
     parser.add_argument("--check", action="store_true", help="检查更新（不执行）")
     parser.add_argument("--force", action="store_true", help="强制更新（覆盖修改）")
     parser.add_argument("--manual", action="store_true", help="手动更新（不使用git）")
@@ -230,7 +230,7 @@ def main():
         INSTALL_PATH = Path(args.root).expanduser().resolve()
         print(f"📁 使用自定义安装目录: {INSTALL_PATH}")
     
-    print_header("HBM Skill 更新工具")
+    print_header("Heartbeat-Memories Skill 更新工具")
     
     # 检查是否已安装
     if not check_installation():

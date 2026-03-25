@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-HBM Skill 在线安装脚本
+Heartbeat-Memories Skill 在线安装脚本
 用户只需运行：curl -s https://raw.githubusercontent.com/[用户名]/hbm-skill/main/scripts/install_hbm.py | python3
 """
 
@@ -142,7 +142,7 @@ def install_dependencies():
 
 def clone_repository():
     """克隆仓库到临时目录"""
-    print_step("1", "下载HBM Skill代码")
+    print_step("1", "下载 Heartbeat-Memories Skill 代码")
     
     # 创建临时目录
     temp_dir = tempfile.mkdtemp(prefix="hbm_install_")
@@ -192,7 +192,7 @@ def copy_files(temp_dir):
 
 def run_initialization():
     """运行初始化脚本"""
-    print_step("4", "初始化HBM系统")
+    print_step("4", "初始化 Heartbeat-Memories 系统")
     
     init_script = INSTALL_PATH / "scripts" / "hbm_init.py"
     if not init_script.exists():
@@ -202,7 +202,7 @@ def run_initialization():
     # 运行初始化脚本
     cmd = f"cd {INSTALL_PATH} && python3 scripts/hbm_init.py --skip-deps"
     if run_command(cmd, cwd=INSTALL_PATH):
-        print_success("HBM系统初始化完成")
+        print_success("Heartbeat-Memories 系统初始化完成")
         return True
     else:
         print_error("初始化失败")
@@ -214,7 +214,7 @@ def create_activation_script():
     
     # 创建简单的激活脚本
     activate_content = f"""#!/bin/bash
-# HBM 快速激活脚本
+# Heartbeat-Memories 快速激活脚本
 export HBM_ROOT="{INSTALL_PATH}"
 echo "✅ HBM 环境已设置"
 echo "📁 HBM_ROOT: $HBM_ROOT"
