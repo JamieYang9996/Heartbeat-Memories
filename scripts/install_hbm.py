@@ -17,10 +17,10 @@ import argparse
 
 # ==================== 配置 ====================
 
-REPO_URL = "https://github.com/OpenClaw-CN/hbm-skill.git"
+REPO_URL = "git@github.com:JamieYang9996/Heartbeat-Memories.git"
 DEFAULT_BRANCH = "main"
 INSTALL_PATH = Path.home() / ".openclaw" / "skills" / "hbm"
-ACTIVATE_SCRIPT_URL = "https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/activate_hbm.sh"
+ACTIVATE_SCRIPT_URL = "https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/activate_hbm.sh"
 
 # 依赖包
 REQUIRED_PACKAGES = [

@@ -130,7 +130,7 @@ class HBMDiagnostic:
         if not HBM_ROOT.exists():
             self.add_result("安装", "HBM根目录", "FAIL",
                            f"目录不存在: {HBM_ROOT}",
-                           "请先安装HBM: curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py | python3")
+                           "请先安装HBM: curl -s https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py | python3")
             return False
         
         self.add_result("安装", "HBM根目录", "PASS", f"目录存在: {HBM_ROOT}")

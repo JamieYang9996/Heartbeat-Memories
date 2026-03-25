@@ -18,7 +18,7 @@ triggers:
 **解决传统Memory文件散乱无序、AI回复冗长无情感的痛点**  
 通过**五大记忆库精细化拆解** + **心跳回忆仿真对话**，让你的OpenClaw真正理解你、记住你、建立专属情感连接。
 
-> **📝 发布前注意**: 本文档中的 GitHub 链接包含占位符 `OpenClaw-CN`。  
+> **📝 发布前注意**: 本文档中的 GitHub 链接包含占位符 `JamieYang9996`。  
 > 请替换为自己的 GitHub 用户名，或修改脚本中的仓库地址。
 
 ## 🚀 一键安装（一句话命令，AI自动执行）
@@ -26,7 +26,7 @@ triggers:
 ### 方案A：复制给AI自动安装（推荐）
 ```bash
 # 复制这句话给你的AI助手（OpenClaw/Claude Code等）：
-帮我安装 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py
+帮我安装 Heartbeat-Memories：https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py
 
 # AI会自动执行安装，你只需确认权限即可
 ```
@@ -34,20 +34,20 @@ triggers:
 ### 方案B：手动执行安装命令
 ```bash
 # 一行命令自动安装
-curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py | python3
+curl -s https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py | python3
 
 # 或下载后安装
-wget https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py
+wget https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py
 python3 install_hbm.py
 ```
 
 ### 方案C：通过GitHub手动安装
 ```bash
 # 1. 克隆仓库到本地
-git clone https://github.com/OpenClaw-CN/hbm-skill.git
+git clone https://github.com/JamieYang9996/Heartbeat-Memories.git
 
 # 2. 复制到OpenClaw技能目录
-cp -r hbm-skill ~/.openclaw/skills/hbm
+cp -r Heartbeat-Memories ~/.openclaw/skills/hbm
 
 # 3. 初始化记忆系统
 cd ~/.openclaw/skills/hbm && python3 scripts/hbm_init.py
@@ -64,10 +64,10 @@ openclaw skill install hbm
 
 ```bash
 # 复制给AI自动更新：
-帮我更新 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py
+帮我更新 Heartbeat-Memories：https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/update_hbm.py
 
 # 或手动更新：
-curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py | python3
+curl -s https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/update_hbm.py | python3
 ```
 
 ## 🩺 系统诊断
@@ -233,7 +233,7 @@ python3 scripts/local_memory_system_v2.py --test
 ## 🤝 贡献与反馈
 
 ### GitHub仓库
-- 项目地址：https://github.com/[你的用户名]/hbm-skill
+- 项目地址：https://github.com/[你的用户名]/Heartbeat-Memories
 - Issues：报告问题或建议功能
 - Pull Requests：欢迎贡献代码
 

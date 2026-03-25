@@ -4,14 +4,14 @@ Heartbeat-Memories 已安装，请帮我更新到最新版本：
 
 ```bash
 # 一行命令自动更新
-curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py | python3
+curl -s https://raw.githubusercontent.com/JamieYang9996/hbm-skill/main/scripts/update_hbm.py | python3
 ```
 
 或者手动执行：
 
 ```bash
 # 下载更新脚本
-wget https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py
+wget https://raw.githubusercontent.com/JamieYang9996/hbm-skill/main/scripts/update_hbm.py
 
 # 运行更新
 python3 update_hbm.py

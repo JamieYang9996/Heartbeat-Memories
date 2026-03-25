@@ -11,7 +11,7 @@
 
 </div>
 
-> **📝 使用前注意**: 本项目中的 GitHub 链接包含占位符 `OpenClaw-CN`。  
+> **📝 使用前注意**: 本项目中的 GitHub 链接包含占位符 `JamieYang9996`。  
 > 发布前请替换为自己的 GitHub 用户名，或 Fork 后修改脚本中的仓库地址。
 
 ---
@@ -115,7 +115,7 @@ Heartbeat-Memories 通过 **五大记忆库精细化拆解** + **心跳回忆情
 #### 方案 A：复制给 AI 自动安装
 ```bash
 # 复制这句话给你的 AI 助手（OpenClaw/Claude Code 等）：
-帮我安装 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py
+帮我安装 Heartbeat-Memories：https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py
 
 # AI 会自动：
 # 1. 下载最新代码
@@ -128,16 +128,16 @@ Heartbeat-Memories 通过 **五大记忆库精细化拆解** + **心跳回忆情
 #### 方案 B：手动执行安装命令
 ```bash
 # 一行命令自动完成所有步骤
-curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py | python3
+curl -s https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py | python3
 ```
 
 #### 方案 C：GitHub 手动安装
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/OpenClaw-CN/hbm-skill.git
+git clone https://github.com/JamieYang9996/Heartbeat-Memories.git
 
 # 2. 复制到技能目录
-cp -r hbm-skill ~/.openclaw/skills/hbm
+cp -r Heartbeat-Memories ~/.openclaw/skills/hbm
 
 # 3. 初始化系统
 cd ~/.openclaw/skills/hbm && python3 scripts/hbm_init.py
@@ -148,10 +148,10 @@ cd ~/.openclaw/skills/hbm && python3 scripts/hbm_init.py
 
 ```bash
 # 复制给 AI 自动更新：
-帮我更新 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py
+帮我更新 Heartbeat-Memories：https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/update_hbm.py
 
 # 或手动更新：
-curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py | python3
+curl -s https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/update_hbm.py | python3
 ```
 
 ### 🩺 系统诊断
@@ -212,7 +212,7 @@ AI: ❤️ 对了，想起来上周五聊到的"海边咖啡厅""日落""拍照"
 ## 🏗️ 系统架构
 
 ```
-hbm-skill/
+Heartbeat-Memories/
 ├── SKILL.md                    # OpenClaw Skill 描述文件
 ├── README.md                   # 项目说明文档
 ├── CHANGELOG.md                # 版本更新日志
@@ -329,7 +329,7 @@ tail -f logs/hbm_system.log
 ## 🤝 贡献与支持
 
 ### GitHub 仓库
-- 项目地址：https://github.com/OpenClaw-CN/hbm-skill
+- 项目地址：https://github.com/JamieYang9996/Heartbeat-Memories
 - Issues：报告问题或建议功能
 - Pull Requests：欢迎贡献代码
 

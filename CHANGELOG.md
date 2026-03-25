@@ -32,7 +32,7 @@
 
 ### 📁 文件结构
 ```
-hbm-skill/
+Heartbeat-Memories/
 ├── SKILL.md                    # Skill 描述
 ├── README.md                   # 项目说明
 ├── CHANGELOG.md                # 版本日志
@@ -74,19 +74,19 @@ hbm-skill/
 ### 🚀 安装命令示例
 ```bash
 # 一句话安装（复制给 AI）
-帮我安装 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py
+帮我安装 Heartbeat-Memories：https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py
 
 # 手动安装
-curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py | python3
+curl -s https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py | python3
 ```
 
 ### 🔄 更新命令
 ```bash
 # 一句话更新
-帮我更新 Heartbeat-Memories：https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py
+帮我更新 Heartbeat-Memories：https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/update_hbm.py
 
 # 手动更新
-curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py | python3
+curl -s https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/update_hbm.py | python3
 ```
 
 ### 📝 使用触发词

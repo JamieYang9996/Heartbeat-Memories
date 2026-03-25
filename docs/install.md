@@ -4,14 +4,14 @@
 
 ```bash
 # 一行命令自动安装
-curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py | python3
+curl -s https://raw.githubusercontent.com/JamieYang9996/hbm-skill/main/scripts/install_hbm.py | python3
 ```
 
 或者手动执行：
 
 ```bash
 # 下载安装脚本
-wget https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py
+wget https://raw.githubusercontent.com/JamieYang9996/hbm-skill/main/scripts/install_hbm.py
 
 # 运行安装
 python3 install_hbm.py
@@ -54,7 +54,7 @@ python3 install_hbm.py
 已经安装过了？更新命令：
 
 ```bash
-curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/update_hbm.py | python3
+curl -s https://raw.githubusercontent.com/JamieYang9996/hbm-skill/main/scripts/update_hbm.py | python3
 ```
 
 ---

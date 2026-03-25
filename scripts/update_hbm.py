@@ -15,7 +15,7 @@ import argparse
 # ==================== 配置 ====================
 
 INSTALL_PATH = Path.home() / ".openclaw" / "skills" / "hbm"
-REPO_URL = "https://github.com/OpenClaw-CN/hbm-skill.git"
+REPO_URL = "git@github.com:JamieYang9996/Heartbeat-Memories.git"
 DEFAULT_BRANCH = "main"
 
 # ==================== 工具函数 ====================
@@ -57,7 +57,7 @@ def check_installation():
     if not INSTALL_PATH.exists():
         print_error(f"Heartbeat-Memories 未安装: {INSTALL_PATH}")
         print("💡 请先安装 Heartbeat-Memories:")
-        print("   curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py | python3")
+        print("   curl -s https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py | python3")
         return False
     
     # 检查git仓库
@@ -66,7 +66,7 @@ def check_installation():
         print_warning("当前安装不是git仓库，无法自动更新")
         print("💡 建议重新安装:")
         print(f"  1. 备份: mv {INSTALL_PATH} {INSTALL_PATH}.backup")
-        print("  2. 重新安装: curl -s https://raw.githubusercontent.com/OpenClaw-CN/hbm-skill/main/scripts/install_hbm.py | python3")
+        print("  2. 重新安装: curl -s https://raw.githubusercontent.com/JamieYang9996/Heartbeat-Memories/main/scripts/install_hbm.py | python3")
         return False
     
     return True
