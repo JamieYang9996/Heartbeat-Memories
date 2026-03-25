@@ -12,11 +12,11 @@ description: >
   通过五大记忆库精细化拆解（目标/经验/情感/会话/版本）+ 心跳回忆仿真对话机制
   实现AI真正理解你、记住你、建立专属情感连接
 triggers:
-  - "记忆系统"、"长期记忆"、"帮我回忆"
-  - "记下来"、"查看目标"、"上次怎么解决的"
-  - "心情记录"、"习惯观察"
-  - "memory system"、"recall"、"save this"
-  - "check goals"、"how did we solve this"
+  - "记忆系统, 长期记忆, 帮我回忆"
+  - "记下来, 查看目标, 上次怎么解决的"
+  - "心情记录, 习惯观察"
+  - "memory system, recall, save this"
+  - "check goals, how did we solve this"
 ---
 
 # Heartbeat-Memories (HBM) - OpenClaw Skill
