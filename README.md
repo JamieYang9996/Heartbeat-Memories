@@ -352,10 +352,6 @@ tail -f logs/hbm_system.log
 - Issues：报告问题或建议功能
 - Pull Requests：欢迎贡献代码
 
-### 社区支持
-- OpenClaw Discord：https://discord.com/invite/clawd
-- 中文讨论：Telegram/微信群（如有）
-
 ### 版本更新
 ```bash
 # 更新到最新版本
