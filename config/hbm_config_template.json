@@ -1,0 +1,72 @@
+{
+  "hbm_config": {
+    "系统信息": {
+      "版本": "1.0.0",
+      "最后更新": "YYYY-MM-DDTHH:MM:SS+08:00",
+      "描述": "HBM (Humanized Brain Memory) 配置文件模板"
+    },
+    "路径配置": {
+      "hbm_root": "${HOME}/.openclaw/skills/hbm",
+      "memory_root": "${HOME}/.openclaw/skills/hbm/memory",
+      "scripts_root": "${HOME}/.openclaw/skills/hbm/scripts",
+      "models_root": "${HOME}/.openclaw/skills/hbm/models",
+      "logs_root": "${HOME}/.openclaw/skills/hbm/logs"
+    },
+    "记忆库配置": {
+      "启用目标记忆库": true,
+      "启用经验记忆库": true,
+      "启用情感记忆库": true,
+      "启用会话记忆库": true,
+      "启用版本记忆库": true,
+      "启用心跳回忆": true,
+      "会话压缩比例": 0.1,
+      "自动记录阈值": 50
+    },
+    "向量检索配置": {
+      "启用语义搜索": true,
+      "向量模型": "all-MiniLM-L6-v2",
+      "向量维度": 384,
+      "相似度阈值": 0.75,
+      "最大返回结果": 5,
+      "模型下载源": "modelscope",
+      "模型自动下载": true
+    },
+    "RAG配置": {
+      "开关控制": {
+        "enable_limit_and_dedupe": false,
+        "enable_cache": false,
+        "enable_log_compression": true
+      },
+      "检索参数": {
+        "vector_search_enabled": true,
+        "keyword_search_enabled": true,
+        "vector_search_weight": 0.7,
+        "keyword_search_weight": 0.3,
+        "max_results": 5,
+        "max_tokens": 1000,
+        "similarity_threshold": 0.75
+      },
+      "日志参数": {
+        "log_dir": "${HOME}/.openclaw/skills/hbm/logs",
+        "compression_day_of_month": 1,
+        "months_to_keep_detailed": 1,
+        "compress_months_ago": 2,
+        "simplification_ratio": 0.3
+      }
+    },
+    "心跳回忆配置": {
+      "enabled": true,
+      "daily_limit": 3,
+      "min_interval_minutes": 60,
+      "avoid_sensitive_festivals": true,
+      "sensitive_festivals": ["清明节", "中元节", "寒衣节"]
+    },
+    "跨平台适配": {
+      "自动检测系统": true,
+      "路径分隔符": "auto",
+      "默认编码": "utf-8",
+      "时区": "Asia/Shanghai"
+    }
+  },
+  "安装说明": "请将本文件复制为 hbm_config.json 并根据需要修改配置。${HOME} 会自动替换为用户主目录。"
+}

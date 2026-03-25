@@ -1,0 +1,16 @@
+# HBM Skill 依赖包
+# 基础依赖
+chromadb>=0.4.22
+sentence-transformers>=2.2.2
+
+# 向量搜索库（根据系统选择）
+# Linux/macOS/Windows CPU版本
+faiss-cpu>=1.7.4
+
+# 可选：国内镜像源加速
+# pip install -i https://pypi.tuna.tsinghua.edu.cn/simple {package}
+
+# 开发依赖（可选）
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0

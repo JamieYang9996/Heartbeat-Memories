@@ -1,0 +1,45 @@
+# 运行时文件和目录
+models/               # 向量模型（用户自行下载）
+logs/                 # 系统日志
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# 用户数据
+memory/语义搜索_db/   # ChromaDB 向量数据库
+memory/RAG/cache/     # RAG 缓存
+memory/*.md           # 用户创建的記憶文件（模板文件已包含）
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 备份文件
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 安装脚本临时文件
+*.temp
+tmp/
