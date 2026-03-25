@@ -6,6 +6,10 @@
 ![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![GitHub Stars](https://img.shields.io/github/stars/JamieYang9996/Heartbeat-Memories?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/JamieYang9996/Heartbeat-Memories?style=social)
+![GitHub Issues](https://img.shields.io/github/issues/JamieYang9996/Heartbeat-Memories)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/JamieYang9996/Heartbeat-Memories)
 
 **完全本地化的长期记忆系统**，让你的 OpenClaw 记住一切重要对话、目标、经验和情感。
 
@@ -359,6 +363,22 @@ cd ~/.openclaw/skills/hbm
 git pull origin main
 python3 scripts/hbm_init.py --upgrade
 ```
+
+---
+
+## 🚀 发布优化（仓库维护者指南）
+
+### GitHub 仓库优化
+- **添加 Topics 标签**：提升搜索曝光 300-500%（建议：`openclaw`, `ai-assistant`, `memory-system`, `local-ai`）
+- **完善仓库描述**：在 GitHub Settings → About 中填写详细描述
+- **检查渲染效果**：确保 README 表格、徽章、代码块正常显示
+
+### 社区推广策略
+- **Discord**：OpenClaw #skills 频道首发，分享安装命令和亮点
+- **中文社区**：V2EX、知乎、SegmentFault 技术分享
+- **ClawHub 上架**：积累 10+ stars 后申请官方技能库上架
+
+📖 **完整发布指南**：[docs/发布优化指南.md](docs/发布优化指南.md)
 
 ---
 
