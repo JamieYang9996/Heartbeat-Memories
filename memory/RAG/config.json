@@ -1,0 +1,42 @@
+{
+  "rag_config": {
+    "开关控制": {
+      "enable_limit_and_dedupe": true,
+      "enable_cache": true,
+      "enable_log_compression": true
+    },
+    "检索参数": {
+      "vector_search_enabled": true,
+      "keyword_search_enabled": true,
+      "vector_search_weight": 0.7,
+      "keyword_search_weight": 0.3,
+      "max_results": 5,
+      "max_tokens": 1000,
+      "similarity_threshold": 0.75
+    },
+    "缓存参数": {
+      "ttl_seconds": 3600,
+      "max_cache_size": 100,
+      "cleanup_interval_seconds": 300
+    },
+    "日志参数": {
+      "log_dir": "/home/admin/.openclaw/workspace/memory/logs",
+      "compression_day_of_month": 1,
+      "months_to_keep_detailed": 1,
+      "compress_months_ago": 2,
+      "retain_detailed_days": 30,
+      "simplification_ratio": 0.3
+    },
+    "敏感节日配置": {
+      "规避敏感节日": true,
+      "敏感节日列表": [
+        "清明节",
+        "中元节",
+        "寒衣节"
+      ]
+    }
+  },
+  "version": "1.1",
+  "last_updated": "2026-03-25T11:03:00+08:00",
+  "description": "HBM项目RAG系统配置文件 - 默认所有优化开关关闭，日志压缩规则：每月1号压缩上上个月日志，保留最近一个月详细版"
+}

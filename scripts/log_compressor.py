@@ -1,52 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-RAG日志压缩器 (HBM Skill 适配版)
-按自然月压缩日志：进入新月份后，自动将上上个月的详细日志压缩为精简版
-规则：每月1号压缩上上个月日志，保留最近一个月详细版
+RAG日志压缩器
+按自然月压缩日志：进入新月份后，自动将上个月的详细日志压缩为精简版
 """
 
 import json
 import re
-import os
 from pathlib import Path
 from datetime import datetime, timedelta
 import shutil
 
 # ==================== 配置区域 ====================
 
-# 从环境变量读取 HBM 根目录
-def get_hbm_root():
-    """获取 HBM 根目录"""
-    # 1. 检查环境变量
-    hbm_root = os.getenv("HBM_ROOT")
-    if hbm_root:
-        return Path(hbm_root).expanduser().resolve()
-    
-    # 2. 检查默认 OpenClaw 技能目录
-    possible_paths = [
-        Path.home() / ".openclaw" / "skills" / "hbm",
-        Path.home() / "AppData" / "Local" / "openclaw" / "skills" / "hbm",  # Windows
-        Path.home() / "Library" / "Application Support" / "openclaw" / "skills" / "hbm",  # macOS
-    ]
-    
-    for path in possible_paths:
-        if path.exists():
-            return path.resolve()
-    
-    # 3. 如果都不存在，使用当前脚本所在目录的上两级
-    return Path(__file__).parent.parent.resolve()
-
-# 计算路径
-HBM_ROOT = get_hbm_root()
-WORKSPACE_PATH = HBM_ROOT
-LOG_DIR = HBM_ROOT / "logs"
-CONFIG_PATH = HBM_ROOT / "config" / "hbm_config.json"
-
-print(f"🔧 日志压缩器路径配置:")
-print(f"  • HBM_ROOT: {HBM_ROOT}")
-print(f"  • 日志目录: {LOG_DIR}")
-print(f"  • 配置文件: {CONFIG_PATH}")
+WORKSPACE_PATH = Path("/home/admin/.openclaw/workspace")
+LOG_DIR = WORKSPACE_PATH / "memory/logs"
+CONFIG_PATH = WORKSPACE_PATH / "memory/RAG/config.json"
 
 # ==================== 日志压缩器 ====================
 
