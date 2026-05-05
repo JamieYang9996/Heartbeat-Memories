@@ -278,10 +278,34 @@ Heartbeat-Memories/
 
 ## 🔧 高级功能
 
-### RAG 系统优化（可选）
-- **Token 限制和去重**: 防止回答过长（默认关闭）
-- **内存缓存**: 提升检索速度（默认关闭）
-- **日志压缩**: 按月自动压缩日志文件（保留最近一个月详细版）
+### RAG 检索增强系统（v1.1.0 全面升级）
+
+**RAG 系统已从单一脚本升级为完整模块**（`memory/RAG/`），包含以下核心组件：
+
+#### 🔍 Phase 1: 核心检索器
+- **混合检索器** (`retriever.py`): 向量搜索（ChromaDB 5 集合）+ 关键词搜索（Markdown grep）双通道
+- **上下文组装器** (`context_assembler.py`): 完整版（带来源标签/相关性分数）和精简版（bootstrap 格式）两种输出
+- **守护进程** (`scripts/rag_daemon.py`): 持久化 Unix Socket 服务，模型常驻内存，查询毫秒级响应
+- **连接器** (`memory_connector.py`): ChromaDB + 向量模型统一管理
+
+#### ⚙️ Phase 2: 智能开关系统
+- **去重 + Token 限制** (`processor.py`): 基于词集 Jaccard 相似度去重，按 Token 数裁剪（开关控制，默认关闭）
+- **内存缓存** (`cache.py`): LRU 风格，TTL 3600 秒，最大 100 条（开关控制，默认开启）
+- **配置管理** (`config_manager.py`): 支持 `config toggle <开关名>` 动态切换
+
+#### 📦 Phase 3: 日志自动压缩
+- **日志压缩器** (`log_compressor.py`): 按自然月自动压缩
+  - 保留最近 1 个月详细版
+  - 更早月份压缩为精简版（保留错误/关键事件/指标）
+  - 自动移除 debug 行、详细堆栈（非错误）、空信息短行
+  - 压缩比目标：30%
+
+#### 🎛️ 配置开关一览
+| 开关 | 默认状态 | 功能 |
+|------|---------|------|
+| `enable_limit_and_dedupe` | 🔴 关闭 | Token 限制与去重 |
+| `enable_cache` | 🟢 开启 | 内存缓存 |
+| `enable_log_compression` | 🟢 开启 | 日志自动压缩 |
 
 ### 自定义扩展
 ```python
@@ -304,6 +328,9 @@ results = rag.retrieve("如何配置 Python 虚拟环境？")
 
 # 获取上下文
 context = rag.format_context(results)
+
+# 通过守护进程查询（推荐生产环境）
+# echo '{"query":"如何配置虚拟环境？"}' | nc -U /tmp/rag_daemon.sock
 ```
 
 ---
