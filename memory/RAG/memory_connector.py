@@ -9,7 +9,7 @@ from sentence_transformers import SentenceTransformer
 import chromadb
 import chromadb.config
 
-WORKSPACE = Path("/home/admin/.openclaw/workspace")
+WORKSPACE = Path(os.environ.get("HBM_ROOT", os.path.expanduser("~/.openclaw/skills/hbm")))
 MEMORY_DB_PATH = WORKSPACE / "memory/语义搜索_db"
 MODEL_PATH = str(Path.home() / ".openclaw/workspace/models/all-MiniLM-L6-v2/sentence-transformers/all-MiniLM-L6-v2")
 

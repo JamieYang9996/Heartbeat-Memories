@@ -33,7 +33,7 @@ DEFAULT_CONFIG = {
             "cleanup_interval_seconds": 300
         },
         "日志参数": {
-            "log_dir": "/home/admin/.openclaw/workspace/memory/logs",
+            "log_dir": "${HBM_ROOT}/../logs",
             "compression_day_of_month": 1,
             "months_to_keep_detailed": 1,
             "compress_months_ago": 2,

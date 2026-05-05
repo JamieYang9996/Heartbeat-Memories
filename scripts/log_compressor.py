@@ -13,7 +13,7 @@ import shutil
 
 # ==================== 配置区域 ====================
 
-WORKSPACE_PATH = Path("/home/admin/.openclaw/workspace")
+WORKSPACE_PATH = Path(os.environ.get("HBM_ROOT", os.path.expanduser("~/.openclaw/skills/hbm")))
 LOG_DIR = WORKSPACE_PATH / "memory/logs"
 CONFIG_PATH = WORKSPACE_PATH / "memory/RAG/config.json"
 

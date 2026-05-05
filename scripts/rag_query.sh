@@ -5,9 +5,13 @@
 
 SOCKET="/tmp/rag_daemon.sock"
 
+# 自动检测 HBM 工作目录
+HBM_DIR="${HBM_ROOT:-$HOME/.openclaw/skills/hbm}"
+[ -d "$HBM_DIR" ] || HBM_DIR="$HOME/.openclaw/workspace"
+
 if [ ! -S "$SOCKET" ]; then
     echo "⚠️ RAG 守护进程未运行，正在启动..."
-    cd /home/admin/.openclaw/workspace
+    cd "$HBM_DIR"
     nohup python3 scripts/rag_daemon.py > /tmp/rag_daemon.log 2>&1 &
     sleep 10
     if [ ! -S "$SOCKET" ]; then
@@ -30,5 +34,5 @@ echo "{\"q\":\"$QUERY\",\"limit\":3,\"fmt\":\"bootstrap\"}" | nc -U "$SOCKET" 2>
 # 如果 socket 通信失败，回退到 oneshot 模式
 if [ $? -ne 0 ]; then
     echo "⚠️ Socket 通信失败，使用单次查询模式..."
-    echo "{\"q\":\"$QUERY\",\"limit\":3,\"fmt\":\"bootstrap\"}" | python3 /home/admin/.openclaw/workspace/scripts/rag_daemon.py --oneshot 2>/dev/null
+    echo "{\"q\":\"$QUERY\",\"limit\":3,\"fmt\":\"bootstrap\"}" | python3 "$HBM_DIR/scripts/rag_daemon.py" --oneshot 2>/dev/null
 fi

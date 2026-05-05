@@ -166,7 +166,7 @@ def run_compression(dry_run: bool = False) -> int:
     """
     config = load_config()
     log_config = config.get("rag_config", {}).get("日志参数", {})
-    log_dir = Path(log_config.get("log_dir", "/home/admin/.openclaw/workspace/memory/logs"))
+    log_dir = Path(log_config.get("log_dir", os.path.join(os.environ.get("HBM_ROOT", os.path.expanduser("~/.openclaw/skills/hbm")), "memory/logs")))
     compress_months_ago = log_config.get("compress_months_ago", 2)
     
     if not log_dir.exists():
@@ -215,7 +215,7 @@ def run_full_compression(dry_run: bool = False) -> dict:
     """
     config = load_config()
     log_config = config.get("rag_config", {}).get("日志参数", {})
-    log_dir = Path(log_config.get("log_dir", "/home/admin/.openclaw/workspace/memory/logs"))
+    log_dir = Path(log_config.get("log_dir", os.path.join(os.environ.get("HBM_ROOT", os.path.expanduser("~/.openclaw/skills/hbm")), "memory/logs")))
     months_to_keep = log_config.get("months_to_keep_detailed", 1)
     
     if not log_dir.exists():

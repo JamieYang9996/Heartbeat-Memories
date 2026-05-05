@@ -15,7 +15,7 @@ from datetime import datetime
 from config_manager import load_config
 from memory_connector import get_chroma_client, get_embedding_fn
 
-WORKSPACE = Path("/home/admin/.openclaw/workspace")
+WORKSPACE = Path(os.environ.get("HBM_ROOT", os.path.expanduser("~/.openclaw/skills/hbm")))
 
 # 五个记忆库的文件路径映射
 MEMORY_FILES = {
